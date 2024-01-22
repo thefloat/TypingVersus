@@ -1,0 +1,60 @@
+.root {
+
+}
+
+#btt-text {
+-fx-font-size: 32px;
+-fx-font-family: "Arial Black";
+-fx-fill: #818181;
+-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.label {
+-fx-font-size: 18px;
+-fx-font-family: "Arial";
+-fx-text-fill: #333333;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#blue-btn {
+-fx-text-fill: white;
+-fx-font-family: "Arial Narrow";
+-fx-font-weight: bold;
+-fx-background-color: deepskyblue;
+-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#blue-btn:hover {
+-fx-background-color: linear-gradient(#00bfff, #7b68ee);
+}
+
+#red-btn {
+-fx-text-fill: white;
+-fx-font-family: "Arial Narrow";
+-fx-font-weight: bold;
+-fx-background-color: tomato;
+-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#red-btn:hover {
+-fx-background-color: linear-gradient(#ff6347, #ff1d01);
+}
+
+#greenyellow-btn {
+-fx-text-fill: white;
+-fx-font-family: "Arial Narrow";
+-fx-font-weight: bold;
+-fx-background-color: greenyellow;
+-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#greenyellow-btn:hover {
+-fx-background-color: linear-gradient(#adff2f, #00e600);
+}
+
+.button:focused {
+-fx-border-color: rgba(255,255,255,0.9);
+-fx-border-style: solid phase 1 outside;
+-fx-border-width: 1;
+-fx-border-radius: 5;
+}

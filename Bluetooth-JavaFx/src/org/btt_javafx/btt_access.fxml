@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<TilePane fx:id="tilePane" alignment="CENTER" orientation="VERTICAL" prefColumns="1" prefHeight="372.0" prefRows="3" styleClass="root" vgap="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.btt_javafx.AccessFxmlController">
+   <children>
+      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="Create or join server to play">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button id="blue-btn" fx:id="accessBtn1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accessBtnActn1" text="CREATE SERVER">
+         <TilePane.margin>
+            <Insets left="27.0" right="27.0" />
+         </TilePane.margin></Button>
+      <Button id="red-btn" fx:id="accessBtn2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accessBtnActn2" text="JOIN SERVER">
+         <TilePane.margin>
+            <Insets left="27.0" right="27.0" />
+         </TilePane.margin></Button>
+      <Button id="greenyellow-btn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accessBtnActn3" text="BACK">
+         <TilePane.margin>
+            <Insets left="27.0" right="27.0" />
+         </TilePane.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+   <stylesheets>
+   	<URL value="@BttApp.css" />
+   </stylesheets>
+</TilePane>

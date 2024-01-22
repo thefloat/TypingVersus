@@ -1,0 +1,76 @@
+.root {
+
+}
+
+.label {
+-fx-font-size: 12px;
+-fx-text-fill: #333333;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#standard-lbl {
+-fx-font-size: 18px;
+-fx-text-fill: #333333;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#menu-bar-btn {
+-fx-text-fill: black;
+-fx-font-family: "Arial Narrow";
+-fx-background-color: rgb(235, 235, 255);
+-fx-border-color: deepskyblue;
+-fx-border-style: solid phase 1 outside;
+-fx-border-width: 1;
+-fx-border-radius: 2;
+}
+
+#menu-bar-btn:hover {
+-fx-background-color: linear-gradient(#ebebff, #fafaff);
+}
+
+#menu-bar-btn:focused {
+-fx-border-color: blue;
+-fx-border-style: solid phase 1 outside;
+-fx-border-width: 1;
+-fx-border-radius: 2;
+}
+
+.button {
+-fx-text-fill: white;
+-fx-font-family: "Arial Narrow";
+-fx-font-size: 11px;
+-fx-background-color: #00cdff;
+-fx-border-color: white;
+-fx-border-style: solid phase 1 outside;
+-fx-border-width: 1;
+-fx-border-radius: 2;
+}
+
+.button:hover {
+-fx-background-color: linear-gradient(#00cdff, #ebebff);
+}
+
+.button:focused {
+-fx-border-color: blue;
+-fx-border-style: solid phase 1 outside;
+-fx-border-width: 1;
+-fx-border-radius: 2;
+}
+
+.scroll-pane {
+-fx-background: rgb(235, 235, 255);	
+}
+#stats-hbox {
+-fx-border-color: darkgray;
+-fx-border-style: solid phase 1 inside;
+-fx-border-width: 1;
+-fx-border-radius: 2;
+
+}
+#stats-vbox1 {
+-fx-background-color: rgb(235, 235, 255);
+
+}
+#stats-vbox2 {
+-fx-background-color: rgb(255, 235, 235);
+}

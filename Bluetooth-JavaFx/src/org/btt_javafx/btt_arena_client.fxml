@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="706.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.btt_javafx.ArenaClientFxmlController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <BorderPane>
+         <center>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                     <children>
+                        <Label id="standard-lbl" fx:id="youNameLbl" text="-" />
+                        <Text id="standard-lbl" fx:id="youScoreTxt" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text id="standard-lbl" fx:id="youWPMTxt" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text id="standard-lbl" fx:id="youWPMValTxt" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text fx:id="youPointsTxt" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text id="standard-lbl" fx:id="youWinLoseTxt" layoutX="10.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <StackPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text fx:id="arenaTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="\\|/">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Text>
+                        <BorderPane fx:id="chatBp" visible="false">
+                           <center>
+                              <ScrollPane fx:id="chatSp" hbarPolicy="NEVER">
+                                 <content>
+                                    <VBox fx:id="chatVB" spacing="5.0">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </center>
+                           <bottom>
+                              <HBox spacing="1.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="textField" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="sndBtn" onAction="#sndBtnActn" text="send" textFill="WHITE" />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="2.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </bottom>
+                           <top>
+                              <HBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label id="standard-lbl" maxWidth="1.7976931348623157E308" text="Chat" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="closeChatBtn" mnemonicParsing="false" onAction="#closeChatBtnActn" text="X" textFill="WHITE" />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="1.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </top>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="statsBp" visible="false">
+                           <center>
+                              <VBox>
+                                 <children>
+                                    <HBox id="stats-hbox" prefWidth="200.0">
+                                       <children>
+                                          <VBox id="stats-vbox1" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="youNameStatsLbl" text="-">
+                                                   <VBox.margin>
+                                                      <Insets left="2.0" />
+                                                   </VBox.margin></Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox id="stats-vbox2" alignment="TOP_RIGHT" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="oppNameStatsLbl" text="-">
+                                                   <padding>
+                                                      <Insets right="2.0" />
+                                                   </padding></Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane fx:id="statsSp" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" prefWidth="300.0" VBox.vgrow="ALWAYS">
+                                       <content>
+                                          <VBox fx:id="statsVB" spacing="5.0">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <top>
+                              <HBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label id="standard-lbl" maxWidth="1.7976931348623157E308" text="Stats" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="closeStatsBtn" mnemonicParsing="false" onAction="#closeStatsBtnActn" text="X" textFill="WHITE" />
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="1.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </StackPane>
+                  <VBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label id="standard-lbl" fx:id="oppNameLbl" text="-" />
+                        <Text id="standard-lbl" fx:id="oppScoreTxt" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text id="standard-lbl" fx:id="oppWPMTxt" layoutX="188.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text id="standard-lbl" fx:id="oppWPMValTxt" layoutX="188.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text fx:id="oppPointsTxt" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text id="standard-lbl" fx:id="oppWinLoseTxt" layoutX="188.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <HBox spacing="4.0">
+               <children>
+                  <Button id="menu-bar-btn" fx:id="statsBtn" mnemonicParsing="false" onAction="#statsBtnActn" text="Stats" textFill="WHITE" />
+                  <Button id="menu-bar-btn" fx:id="chatBtn" mnemonicParsing="false" onAction="#chatBtnActn" text="Chat" textFill="WHITE" />
+                  <StackPane alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <MenuButton id="menu-bar-btn" mnemonicParsing="false" text="*">
+                          <items>
+                              <Menu mnemonicParsing="false" text="Reset">
+                                <items>
+                                  <MenuItem fx:id="resetScoresMI" disable="true" mnemonicParsing="false" onAction="#resetScoresMIActn" text="Reset Scores" />
+                                  <MenuItem fx:id="resetStatsMI" mnemonicParsing="false" onAction="#resetStatsMIActn" text="Reset Stats" />
+                                    <MenuItem fx:id="resetAllMI" disable="true" mnemonicParsing="false" onAction="#resetAllMIActn" text="Reset All" />
+                                </items>
+                              </Menu>
+                            <MenuItem fx:id="clearChatMI" mnemonicParsing="false" onAction="#clearChatMIActn" text="Clear chat" />
+                              <MenuItem fx:id="exitMI" mnemonicParsing="false" onAction="#exitMIActn" text="Exit" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </StackPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Button fx:id="goBtn" disable="true" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goBtnActn" prefWidth="45.0" text="Go!" textFill="WHITE" />
+                  <ProgressBar fx:id="youPBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="0.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </ProgressBar>
+                  <Label fx:id="timerLbl" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="oppPBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="0.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </ProgressBar>
+                  <Button fx:id="newBtn" disable="true" maxWidth="-Infinity" mnemonicParsing="false" onAction="#newBtnActn" prefWidth="45.0" text="New" textFill="WHITE" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </BorderPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <fx:include fx:id="bttTextEditor" source="textEditor.fxml" GridPane.rowIndex="1" />
+            <Text fx:id="timerCDTxt" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="150.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
+   <stylesheets>
+   	<URL value="@ArenaClient.css" />
+   </stylesheets>
+</GridPane>
